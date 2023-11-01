@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Estacionamiento de Autos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Estacionamiento de Autos</h1>
+        <div id="options" class="options">
+            <button id="mostrarModalBtn" onclick="mostrarModal()">Entrada de Auto</button>
+            <button id="salidaAutoBtn" onclick="salidaAuto()">Salida de Auto</button>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close" onclick="cerrarModal()">&times;</span>
+
+            <h2>Entrada de Auto</h2>
+
+            <p>Ingrese placas del auto: </p>
+            <input id="placas" type="text" placeholder="Placas.....">
+
+            <p>Ingrese nombre del propietario: </p>
+            <input id="propietario" type="text" placeholder="Propietario.....">
+            
+            <button id="entradaAutoBtn" onclick="entradaAuto()">Ingresar Auto</button>
+        </div>
+    </div>
+
+    <div id="output" class="output"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

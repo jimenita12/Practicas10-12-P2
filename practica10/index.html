@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ventanilla de Banco</title>
+</head>
+<body>
+    <h1>Ventanilla de Banco</h1>
+
+    <div class="contenedor-cola">
+        <div class="contenedor-button">
+            <button id="agregar-cliente-btn">Agregar Cliente</button>
+            <button id="atender-cliente-btn">Atender en Ventanilla</button>
+        </div>
+        <table id="tabla-clientes">
+            <thead>
+                <tr>
+                    <th>Número de Turno</th>
+                    <th>Nombre del Cliente</th>
+                    <th>Tipo de Movimiento</th>
+                    <th>Hora de Llegada</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        
+    </div>
+
+    <!-- Modal para ingresar datos del cliente -->
+    <dialog id="modal-agregar-cliente">
+        <form>
+            <label for="nombre-cliente">Nombre del Cliente:</label>
+            <input type="text" id="nombre-cliente" required>
+            <br>
+            <label for="tipo-movimiento">Tipo de Movimiento:</label>
+            <select id="tipo-movimiento" required>
+                <option value="Depósito">Elegir.....</option>
+                <option value="Depósito">Depósito</option>
+                <option value="Retiro">Retiro</option>
+                <option value="Transferencia">Transferencia</option>
+                <option value="Consulta">Consulta</option>
+            </select>
+            <br>
+            <button id="enviar-cliente">Agregar Cliente</button>
+            <button id="cerrar-modal">Cerrar</button>
+        </form>
+    </dialog>
+
+    <div id="dialogo" class="dialogo">
+        <div class="contenido-dialogo">
+            <h2>Datos del Cliente</h2>
+            <p id="informacion-cliente"></p>
+            <button id="cerrar-dialogo">Cerrar</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
